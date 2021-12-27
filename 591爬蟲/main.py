@@ -100,13 +100,19 @@ def itr_data1():
             
             continue
                     
-        if (savecount%1000 == 0) | (i == 6639572):
+        if (savecount%1000 == 0):
 
             output = pd.read_csv('C:\\Users\\user\\Downloads\\591crawler\\rent_3.csv')
             output = output.append(pd.DataFrame(datalist))
             output.to_csv('C:\\Users\\user\\Downloads\\591crawler\\rent_3.csv', index=False, encoding='utf-8-sig')
             datalist = []
             savecount=0
+            
+    output = pd.read_csv('C:\\Users\\user\\Downloads\\591crawler\\rent_3.csv')
+    output = output.append(pd.DataFrame(datalist))
+    output.to_csv('C:\\Users\\user\\Downloads\\591crawler\\rent_3.csv', index=False, encoding='utf-8-sig')
+    datalist = []
+    savecount=0
     
     return None
 
@@ -190,13 +196,18 @@ def itr_data2():
             
             continue
                     
-        if (savecount%1000 == 0) | (i == 2490410):
+        if (savecount%1000 == 0):
 
             output = pd.read_csv('C:\\Users\\user\\Downloads\\591crawler\\rent_4.csv')
             output = output.append(pd.DataFrame(datalist))
             output.to_csv('C:\\Users\\user\\Downloads\\591crawler\\rent_4.csv', index=False, encoding='utf-8-sig')
             datalist = []
             savecount=0
+    output = pd.read_csv('C:\\Users\\user\\Downloads\\591crawler\\rent_4.csv')
+    output = output.append(pd.DataFrame(datalist))
+    output.to_csv('C:\\Users\\user\\Downloads\\591crawler\\rent_4.csv', index=False, encoding='utf-8-sig')
+    datalist = []
+    savecount=0
     
     return None
 
